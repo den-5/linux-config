@@ -7,7 +7,6 @@ from creators.drivers import GraphicDrivers
 from creators.patches import PatchSystemBugs
 from creators.daemons import Daemons
 
-# TODO: Implement error handling for package installation
 
 class SystemConfiguration:
     def start(*args):
@@ -18,7 +17,7 @@ class SystemConfiguration:
         if args[2]: SystemConfiguration.__start_option_3()
         if args[3]: SystemConfiguration.__start_option_4()
         if args[4]: GraphicDrivers.build()
-        # TODO: The process should not be repeated when reassembling, important components should only be updated with new ones
+
         Daemons.enable_all_daemons()
         PatchSystemBugs.enable_all_patches()
 
@@ -44,19 +43,14 @@ class SystemConfiguration:
     def __start_option_4():
         Logger.add_record("[+] Installed Dev Dependencies", status=LoggerStatus.SUCCESS)
         SystemConfiguration.__install_pacman_package(packages.DEV_PACKAGES)
-        SystemConfiguration.__install_pacman_package(packages.GNOME_OFFICIAL_TOOLS)
 
     @staticmethod
-    # TODO: Make a universal function for installing packages
-    # TODO: Catch errors if the software is not detected
     def __install_pacman_package(package_names: list):
         for package in package_names:
             os.system(f"sudo pacman -S --noconfirm {package}")
             Logger.add_record(f"Installed: {package}", status=LoggerStatus.SUCCESS)
 
     @staticmethod
-    # TODO: Make a universal function for installing packages
-    # TODO: Catch errors if the software is not detected
     def __install_aur_package(package_names: list):
         for package in package_names:
             os.system(f"yay -S --noconfirm {package}")

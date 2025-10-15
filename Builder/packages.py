@@ -9,7 +9,6 @@ BASE_PACKAGES = [
     "npm",  # Зависимость для других компонентов
     "brightnessctl",  # Используется для управления яркостью (bin/brightness)
     "kitty",  # Зависимость nvim для images.lua
-    "gvfs", "gvfs-mtp",  # Поддержка MTP протокола, монтирование Android через USB
     "automake", "make", "cmake", "autoconf",  # Автоматическое создание Makefile
     "bluez", "bluez-utils",  # Пакеты для модуля блютуз
     "dunst",  # Демон уведомлений
@@ -81,37 +80,21 @@ BASE_PACKAGES = [
 
 DEV_PACKAGES = [
     "screenkey",  # Вывод нажатий клавиатуры на экран
-    "timeshift",  # Софт для бэкапов
     "pinta",  # Софт для рисования
-    "kdenlive",  # Монтаж видео
     "lazygit",  # Удобный интерфейс для управления git
-    "wireshark-qt",  # Перехват и анализ сетевых пакетов
-    "filezilla",  # Работа с FTP из графической среды
     "chromium",  # Дополнительный браузер
-    "xfce4-settings",  # Зависимость для thunar и thunar actions
     "keepassxc",  # Защищенный менеджер паролей
-    "audacity",  # Работа со звуком
-    "gufw",  # TODO: Deprecated
-    # "python-pywal",  # TODO: Deprecated
     "bleachbit",  # Софт для шрединга файлов и безопасной очистки системы
     "veracrypt",  # Создание криптоконтейнеров
-    "homebank",  # Отслеживание финансов
-    # "touche",  # TODO: Deprecated
-    # "dconf-editor",  TODO: Deprecated
     "neovim",  # Консольный редактор кода
     "obs-studio",  # Запись видео и управление трансляциями
     "telegram-desktop",  # Мессенджер
-    "tmux",  # TODO: Deprecated
     "yt-dlp",  # Утилита для работы с youtube
     "code",  # Редактор кода
     "cowsay",  # Вывод текста с ASCII артами
     "deluge-gtk",  # Торрент клиент
     "flameshot",  # Программа для скриншотов
-    "sqlitebrowser",  # Работа с SQLite базами
     "obsidian",  # Работа с заметками
-    "python-pip",  # Система управления пакетами Python
-    "bpython",  # Выполнение Python кода построчно
-    "ipython",  # Интерактивный режим Python
     "cloc",  # Посчитать количество строк кода
     "hexyl",  # Hex дампер
 ]
@@ -120,13 +103,11 @@ AUR_PACKAGES = [
     "lazydocker",  # Удобный интерфейс для управления docker
     "cava",  # Вывод спектра для музыки
     "i3lock-color",  # Используется для блокировки экрана
-    "ptpython",  # Выполнение Python кода построчно
     "ttf-symbola",  # Для отображения emoji в rofi-menu
     "hyx",  # Редактирование и просмотр Hex внутри файла
     "arttime-git",  # Консольный таймер и секундомер
     "bluetuith",  # TUI менеджер управления bluetooth
     "rofi-bluetooth-git",  # Управление bluetooth в rofi
-    "anki",  # Программа для запоминания материала через карточки
     "light",  # TODO: Нужен для управления яркостью amd (bin/brightness)
 ]
 
